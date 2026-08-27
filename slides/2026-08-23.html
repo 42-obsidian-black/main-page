@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LT資料 2026-08-23(日) | OBSIDIAN BLACK</title>
+    <style>
+      .panel {
+        display: none;
+      }
+      .panel.active {
+        display: block;
+      }
+      .panel iframe {
+        width: 100%;
+        height: 640px;
+      }
+      .tabs button.active {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="../index.html">← トップに戻る</a></p>
+    <h1>LT資料（2026-08-23(日)）</h1>
+
+    <p class="tabs">
+      <button class="active" data-target="panel-01">01. kjikuhar</button>
+      <button data-target="panel-02">02. miwasa</button>
+      <button data-target="panel-03">03. kaisobe</button>
+      <button data-target="panel-04">04. mkawano</button>
+      <button data-target="panel-05">05. ikawamuk</button>
+      <button data-target="panel-06">06. stanaka2</button>
+    </p>
+
+    <div id="panel-01" class="panel active">
+      <h2>物理世界をデバッグしよう！</h2>
+      <iframe src="https://drive.google.com/file/d/1kdZD6dWOJZGiJwBrqTgEqF9Rq8ItEETm/preview" allow="autoplay"></iframe>
+    </div>
+    <div id="panel-02" class="panel">
+      <h2>Quine（自己複製プログラム）</h2>
+      <iframe src="https://drive.google.com/file/d/1mN9BVvNzhT9mgATz868RVmrxbtEwHaN0/preview" allow="autoplay"></iframe>
+    </div>
+    <div id="panel-03" class="panel">
+      <h2>13年ぶりのOCamlカンファレンス</h2>
+      <iframe src="https://drive.google.com/file/d/1-qXPOOxwucYUcYZIaDpaR2QHltdjE2As/preview" allow="autoplay"></iframe>
+    </div>
+    <div id="panel-04" class="panel">
+      <h2>ターミナル乗り換え＆コーディングエージェント活用</h2>
+      <iframe src="https://drive.google.com/file/d/1SObSdWq28ASqhquH578mABIxORuVO4IA/preview" allow="autoplay"></iframe>
+    </div>
+    <div id="panel-05" class="panel">
+      <h2>C++のstd::stringをC言語で再現する</h2>
+      <iframe src="https://drive.google.com/file/d/1krKJN4XY0wkvFdABOwblAz_8JEYwmsai/preview" allow="autoplay"></iframe>
+    </div>
+    <div id="panel-06" class="panel">
+      <h2>sRGBとガンマについて</h2>
+      <iframe src="https://drive.google.com/file/d/1M-JLKBQq66tt5ewwy0QnuYn-mGfIJnsn/preview" allow="autoplay"></iframe>
+    </div>
+
+    <script>
+      document.querySelectorAll(".tabs button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tabs button")
+            .forEach((b) => b.classList.remove("active"));
+          document
+            .querySelectorAll(".panel")
+            .forEach((p) => p.classList.remove("active"));
+          btn.classList.add("active");
+          document.getElementById(btn.dataset.target).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
